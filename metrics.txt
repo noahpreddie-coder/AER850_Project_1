@@ -1,0 +1,43 @@
+Model comparison (CV F1 macro, Test F1, Test Precision macro, Test Acc)
+LogisticRegression | CV F1: 0.953 | Test F1: 1.000 | Test Prec(m): 1.000 | Test Acc: 1.000 | Best Params: {'clf__C': 10.0}
+KNN               | CV F1: 0.967 | Test F1: 0.966 | Test Prec(m): 0.974 | Test Acc: 0.988 | Best Params: {'clf__n_neighbors': 5, 'clf__weights': 'uniform'}
+DecisionTree      | CV F1: 0.979 | Test F1: 1.000 | Test Prec(m): 1.000 | Test Acc: 1.000 | Best Params: {'clf__max_depth': None, 'clf__min_samples_split': 2}
+RandomForest      | CV F1: 0.987 | Test F1: 1.000 | Test Prec(m): 1.000 | Test Acc: 1.000 | Best Params: {'clf__n_estimators': 100, 'clf__min_samples_split': 2, 'clf__max_features': None, 'clf__max_depth': 5}
+
+Selected model: RandomForest
+
+Classification report:
+              precision    recall  f1-score   support
+
+           1      1.000     1.000     1.000         5
+           2      1.000     1.000     1.000         5
+           3      1.000     1.000     1.000         5
+           4      1.000     1.000     1.000         5
+           5      1.000     1.000     1.000         5
+           6      1.000     1.000     1.000         4
+           7      1.000     1.000     1.000        29
+           8      1.000     1.000     1.000        44
+           9      1.000     1.000     1.000        50
+          10      1.000     1.000     1.000         5
+          11      1.000     1.000     1.000         5
+          12      1.000     1.000     1.000         5
+          13      1.000     1.000     1.000         5
+
+    accuracy                          1.000       172
+   macro avg      1.000     1.000     1.000       172
+weighted avg      1.000     1.000     1.000       172
+
+Confusion matrix:
+[[ 5  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  5  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  5  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  5  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  5  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  4  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0 29  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0 44  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0 50  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  5  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  5  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  5  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  5]]
